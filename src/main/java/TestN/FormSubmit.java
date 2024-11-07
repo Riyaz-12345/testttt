@@ -7,11 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class FormSubmit {
+public class FormSubmit extends AbstractComponent {
 
     WebDriver driver;
     public FormSubmit(WebDriver driver)
     {
+        super(driver);
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
@@ -31,6 +32,10 @@ public class FormSubmit {
     WebElement submit;
     @FindBy(css = ".alert-success")
     WebElement message;
+    @FindBy(id = "exampleFormControlSelect1")
+    WebElement dropdown;
+
+    //By results= By.xpath("//input[@type='username");
 
 
     public void input()
@@ -44,8 +49,6 @@ public class FormSubmit {
 
     public void getSelect()
     {
-        WebElement dropdown = driver.findElement(By.id("exampleFormControlSelect1"));
-
         Select abc = new Select(dropdown);
 
         abc.selectByVisibleText("Male");
@@ -58,10 +61,6 @@ public class FormSubmit {
         submit.click();
         System.out.println(message);
     }
-
-
-
-
 
 
 
