@@ -1,25 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-26T18:43:18 IST" name="Default Suite" finished-at="2024-07-26T18:43:44 IST" duration-ms="26259">
+  <suite started-at="2024-08-01T19:21:40 IST" name="Default Suite" finished-at="2024-08-01T19:25:26 IST" duration-ms="225382">
     <groups>
     </groups>
-    <test started-at="2024-07-26T18:43:18 IST" name="TestProject" finished-at="2024-07-26T18:43:44 IST" duration-ms="26259">
+    <test started-at="2024-08-01T19:21:40 IST" name="TestProject" finished-at="2024-08-01T19:25:26 IST" duration-ms="225382">
       <class name="TestN.Form_submit">
-        <test-method signature="E2e()[pri:0, instance:TestN.Form_submit@290dbf45]" started-at="2024-07-26T18:43:18 IST" name="E2e" finished-at="2024-07-26T18:43:44 IST" duration-ms="26221" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TestN.Form_submit@157632c9]" started-at="2024-08-01T19:24:11 IST" name="launchApplication" finished-at="2024-08-01T19:25:15 IST" duration-ms="64487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="E2e()[pri:0, instance:TestN.Form_submit@157632c9]" started-at="2024-08-01T19:25:15 IST" name="E2e" finished-at="2024-08-01T19:25:26 IST" duration-ms="10726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- E2e -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:TestN.Form_submit@157632c9]" started-at="2024-08-01T19:25:26 IST" name="closeApplication" finished-at="2024-08-01T19:25:26 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
       </class> <!-- TestN.Form_submit -->
+      <class name="TestN.ExtentReportNG">
+        <test-method is-config="true" signature="config()[pri:0, instance:TestN.ExtentReportNG@36f0f1be]" started-at="2024-08-01T19:21:40 IST" name="config" finished-at="2024-08-01T19:21:41 IST" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+      </class> <!-- TestN.ExtentReportNG -->
       <class name="TestN.Test02">
-        <test-method signature="run()[pri:0, instance:TestN.Test02@4148db48]" started-at="2024-07-26T18:43:44 IST" name="run" finished-at="2024-07-26T18:43:44 IST" duration-ms="1" status="PASS">
+        <test-method signature="run()[pri:0, instance:TestN.Test02@55040f2f]" started-at="2024-08-01T19:25:26 IST" name="run" finished-at="2024-08-01T19:25:26 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
       </class> <!-- TestN.Test02 -->
+      <class name="TestN.EndToend">
+        <test-method signature="EndToend1()[pri:0, instance:TestN.EndToend@6591f517]" started-at="2024-08-01T19:21:41 IST" name="EndToend1" finished-at="2024-08-01T19:24:11 IST" duration-ms="149436" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8676
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'STIPL-SMBD0093', ip: '172.18.40.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8676
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'STIPL-SMBD0093', ip: '172.18.40.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at TestN.EndToend.EndToend1(EndToend.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8676
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+... 32 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+at java.base/java.net.Socket.connect(Socket.java:752)
+at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+... 54 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndToend1 -->
+      </class> <!-- TestN.EndToend -->
       <class name="TestN.test">
-        <test-method signature="Test023()[pri:0, instance:TestN.test@701fc37a]" started-at="2024-07-26T18:43:44 IST" name="Test023" finished-at="2024-07-26T18:43:44 IST" duration-ms="0" status="PASS">
+        <test-method signature="Test023()[pri:0, instance:TestN.test@6ee12bac]" started-at="2024-08-01T19:25:26 IST" name="Test023" finished-at="2024-08-01T19:25:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test023 -->

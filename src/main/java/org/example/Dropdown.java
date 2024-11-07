@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 
 public class Dropdown {
 
@@ -26,8 +27,8 @@ public class Dropdown {
 
         driver.findElement(By.id("btnclosepaxoption")).click();
 
-        //Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
+        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
 
-        //System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+        System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
     }
 }

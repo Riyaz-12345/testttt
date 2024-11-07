@@ -6,22 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Form_submit {
-    @Test
-            public void E2e()
+import java.io.IOException;
 
-      {
-        System.setProperty("webdriver.chrome.driver", "C://Users/riyazp/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-debugging-port=9222");
-        WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+public class Form_submit extends BaseTest{
+    @Test
+    public void E2e() throws IOException {
+        launchApplication();
         FormSubmit submitform=new FormSubmit(driver);
-        driver.get("https://rahulshettyacademy.com/angularpractice/");
         submitform.input();
         submitform.getSelect();
         submitform.action();
+       // closeApplication();
     }
+
+   // @DataProvider
+   // public Object[][] getData()
+   // {
+      // return new Object[][] {"rahul","hello@abc.com","123456"};
+   // }
+
 }

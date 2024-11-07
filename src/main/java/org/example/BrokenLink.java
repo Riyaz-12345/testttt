@@ -30,7 +30,7 @@ public class BrokenLink {
 
         //a[href*="soapui"]'
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
-        List<WebElement> links=   driver.findElements(By.cssSelector("li[class='gf-li'] a"));
+        List<WebElement> links= driver.findElements(By.cssSelector("li[class='gf-li'] a"));
         SoftAssert a =new SoftAssert();
         for(WebElement link : links)
         {

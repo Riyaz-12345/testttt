@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Functionaltest {
     public static void main(String[]args) throws InterruptedException {
@@ -19,7 +18,7 @@ public class Functionaltest {
         options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         WebDriverWait w =new WebDriverWait(driver,5);
         String[] itemsNeeded= {"Cucumber","Brocolli","Beetroot", "Cauliflower","Tomato  "};

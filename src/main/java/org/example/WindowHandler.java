@@ -37,7 +37,7 @@ public class WindowHandler {
 
         String emailId= driver.findElement(By.cssSelector(".im-para.red")).getText().split("at")[1].trim().split(" ")[0];
         String emailid2=emailId.split("@")[1].split("\\.")[0];
-       // String emailid3=emailid2.split("\\.")[0];
+        // String emailid3=emailid2.split("\\.")[0];
         driver.switchTo().window(parentId);
 
         driver.findElement(By.id("username")).sendKeys(emailid2);

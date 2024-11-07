@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public class Assignment2 {
     public static void main(String[] args) throws InterruptedException {
@@ -16,7 +16,7 @@ public class Assignment2 {
         options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(22));
         driver.get("https://rahulshettyacademy.com/loginpagePractise/");
         driver.findElement(By.id("username")).sendKeys("rahulshettyacademy");
         driver.findElement(By.id("password")).sendKeys("learning");

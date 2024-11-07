@@ -1,16 +1,19 @@
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
 public class Browser {
 
-    public static void main(String[]args){
+    public static void main(String[]args) throws IOException {
         System.setProperty("webdriver.chrome.driver","C://Users/riyazp/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
 
     ChromeOptions options = new ChromeOptions();
@@ -40,15 +43,15 @@ public class Browser {
         element.click();
         driver.findElement(By.xpath("//div[@class='checkbox checkbox-primary']")).click();
         driver.findElement(By.cssSelector("[type='submit']")).click();
-        //WebElement successTextElement = driver.findElement(By.id("success-message-id")); // Use the actual locator for your success message
-        //String successText = successTextElement.getText();
+        WebElement successTextElement = driver.findElement(By.id("success-message-id")); // Use the actual locator for your success message
+        String successText = successTextElement.getText();
 
-        // Assert that the success text contains the expected message
-        //Assert.assertTrue(successText.contains("Success! Thank you!"), "Success text is incorrect!");
+        //Assert that the success text contains the expected message
+        Assert.assertTrue(successText.contains("Success! Thank you!"), "Success text is incorrect!");
 
         // Take a screenshot
-       // File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        //FileUtils.copyfile(screenshot, new File("screen.png"));
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshot, new File("screen.png"));
 
 
 
