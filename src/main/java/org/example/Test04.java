@@ -102,9 +102,7 @@ public class Test04 {
 
         return password;
 
-//0th index - Please use temporary password
 
-//1st index - rahulshettyacademy' to Login.
 
 
 
