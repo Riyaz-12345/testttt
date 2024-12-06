@@ -5,11 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
- 
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class TableGrid {
 
@@ -35,13 +33,6 @@ public class TableGrid {
         {
             arr.add((ele.getText()));
         }
-
-        Map<Integer,String>  map=new HashMap<>();
-        for(int i=0;i<arr.toArray().length;i++)
-        {
-            map.put(i, arr.get(i));
-        }
-        System.out.println(map);
         System.out.println(arr);
         driver.close();
 
